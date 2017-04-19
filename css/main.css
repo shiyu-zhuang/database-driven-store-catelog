@@ -1,0 +1,316 @@
+/*Color Scheme
+#FF395A
+#FFF
+#666
+#FFECEF
+*/
+* {
+    box-sizing: border-box;
+    transition: 0.1s all ease-in-out;
+}
+
+
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0.618rem;
+    line-height: 1.618;
+    width: 100%;
+}
+
+wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Pacifico", cursive;
+}
+
+.masthead {
+    height: 80vh;
+    background-image: url(../img/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 8px solid #FFECEF;
+    border-radius: 20px;
+}
+
+
+/* Add this class to any HTML element that needs clearing float */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/*-- .content-box styles entire content --*/
+
+.content-box {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.wrapper {
+    max-width: 100rem;
+    margin: 0rem auto;
+}
+
+.logo {
+    color: #FFF;
+    font-size: 4rem;
+}
+
+.content-box h1 {
+    padding-top: 45vh;
+}
+
+.masthead-bg {
+    background-color: #FF395A;
+    color: #FFF;
+}
+
+.masthead-bg h1 {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.nav-bg .content-box {
+    margin: 0;
+}
+
+.main-content-bg {
+    background-color: #FFF;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.main-content-bg h2 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+
+/*-- NAVIGATION --*/
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #FFECEF;
+}
+
+.navbar li {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #FF395A;
+}
+
+.navbar li a {
+    background-color: #FFF;
+    color: #FF395A;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: .5rem 0;
+    cursor: pointer;
+}
+
+.navbar li a:hover {
+    background-color: #FFECEF;
+    color: #FF395A;
+}
+
+.navbar li:last-child a {
+    margin: 0;
+}
+
+
+/*img container*/
+
+.container {
+    margin: 1rem;
+    /*
+    border: 1px solid red; */
+}
+
+.container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*
+    border: 1px solid blue; */
+}
+
+.container ul li {
+    margin: 0 0 1rem 0;
+}
+
+.container ul img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*img title*/
+
+figcaption {
+    text-align: center;
+}
+
+figcaption a:link,
+figcaption a:visited {
+    text-decoration: none;
+    color: #666;
+}
+
+figcaption a:hover,
+figcaption a:active {
+    text-decoration: none;
+    color: #FF395A;
+}
+
+
+/*-- Styling footer --*/
+
+.footer-bg {
+    background-color: #FF395A;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer-bg p {
+    margin: 0;
+}
+
+
+/* TABLET - Content needs to be displayed in 3 columns */
+
+@media screen and (min-width: 35rem) and (max-width: 80rem) {
+    body {
+        font-size: 1rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrpper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container ul::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    .container ul .float_l {
+        width: calc(33.33% - 1rem + 0.33rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    .container ul .float_l:nth-child(3n+3) {
+        margin: 0 0 1rem 0;
+    }
+    .container ul li {
+        width: 100%;
+    }
+    /* navigation list has to be displayed horizontally
+       and the gap between two list items is 1px */
+    .content-box {
+        margin: 0;
+    }
+    .navbar ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar li {
+        display: inline-block;
+        width: calc(20% - 3.47px);
+        margin: 0 1px 0 0;
+        border: 0;
+    }
+    .navbar a {
+        width: 100%;
+    }
+    .navbar li::last-child {
+        margin: 0;
+    }
+}
+
+
+/* DESKTOP - Content needs to be displayed in 4 columns */
+
+@media screen and (min-width: 80rem) {
+    body {
+        max-width: 100%;
+        font-size: 1.618rem;
+        margin: 0 auto;
+    }
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    .container ul .float_l {
+        width: calc(25% - 0.75rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    /*
+    .container ul .float_l:nth-child(4n) {
+        margin: 0 0 1rem 0;
+    }
+*/
+    .container ul .float_l:nth-child(4n+4) {
+        margin: 0 0 1rem 0;
+    }
+    .container ul li {
+        width: 100%;
+    }
+    .content-box {
+        text-align: left;
+        margin-left: 5%;
+    }
+    .center {
+        text-align: center;
+    }
+    .navbar ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar li {
+        display: inline-block;
+        width: calc(20% - 4.988px);
+        margin: 0 1px 0 0;
+        border: 0;
+    }
+    .navbar li::last-child {
+        margin: 0;
+    }
+    .main-content-bg h2 {
+        margin: 0 0 1rem 5%;
+        text-align: left;
+    }
+}
